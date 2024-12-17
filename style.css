@@ -1,0 +1,316 @@
+body {
+    background: #363433;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh; 
+}
+
+
+#container {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+       z-index: 1; 
+    position: relative;
+}
+
+.bouncing-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden; 
+}
+
+.box {
+    width: 80px;
+    height: 160px;   
+    border-radius: 15px;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative; 
+    opacity: 0.6;
+}
+
+@keyframes bounceDownUp {
+    0% {
+        transform: translateY(-160px); 
+    }
+    50% {
+        transform: translateY(calc(100vh - 160px)); 
+    }
+    100% {
+        transform: translateY(-160px);  
+    }
+}
+
+@keyframes bounceUpDown {
+    0% {
+        transform: translateY(calc(100vh - 160px));  
+    }
+    50% {
+        transform: translateY(-160px);  
+    }
+    100% {
+        transform: translateY(calc(100vh - 160px));  
+    }
+}
+
+.box1 {
+  animation-name: bounceDownUp;
+  background-color: #FF69B4; 
+}
+
+.box2 {
+  animation-name: bounceUpDown;
+  background-color: #9B59B6; 
+}
+
+.box3 {
+  animation-name: bounceDownUp;
+  background-color: #1ABC9C;
+}
+
+.box4 {
+  animation-name: bounceUpDown;
+  background-color: #3498DB;
+}
+
+.box5 {
+  animation-name: bounceDownUp;
+  background-color: #2ECC71; 
+}
+
+.box6 {
+  animation-name: bounceUpDown;
+  background-color: #E74C3C;
+}
+
+.box7 {
+  animation-name: bounceDownUp;
+  background-color: #F1C40F;
+}
+
+h1 {
+    font-size: 200px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; 
+    font-style: normal;
+    text-align: center;
+    padding: 80px;
+}
+
+h2 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+}
+
+#links {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr;
+  }
+
+a {
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+.font-row {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.scrolling-text {
+    font-size: 60px;
+    color: white; 
+    position: absolute;
+    white-space: nowrap;
+    padding: 20px 0;
+    width: max-content;
+    top: 50%;
+    left: 0;
+    animation: scroll 30s linear infinite;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    will-change: transform;
+}
+
+.font-row:hover .scrolling-text {
+    animation-play-state: paused; 
+}
+
+.scroll-reverse .scrolling-text {
+    animation-name: scroll-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(100vw, -50%);
+    }
+    100% {
+        transform: translate(-100%, -50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translate(-100%, -50%);
+    }
+    100% {
+        transform: translate(100vw, -50%);
+    }
+}
+
+.scrolling-text {
+    font-size: 60px;
+    color: white; 
+    position: absolute;
+    white-space: nowrap;
+    padding: 20px 0;
+    width: max-content;
+    top: 50%;
+    left: 0;
+    animation: scroll 20s linear infinite;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    will-change: transform;
+}
+
+#input-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1; 
+}
+
+#input-box {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    resize: vertical;
+    position: relative;
+    z-index: 2;
+}
+
+#input-box::placeholder {
+    font-size: 50px;
+    color: #666;
+}
+
+
+.font-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#font-weight {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+#add-text {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-text:hover {
+    background: #f0f0f0;
+}
+
+.custom-text {
+    font-family: 'Montserrat', sans-serif;
+    animation: scroll 25s linear infinite;
+}
+
+#text-color {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+label {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+.scroll-reverse .custom-text {
+    animation: scroll-reverse 25s linear infinite;
+}
+
+.font-row + .font-row {
+    margin-top: 30px;
+}
+
